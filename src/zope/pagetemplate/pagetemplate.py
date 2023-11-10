@@ -119,6 +119,7 @@ class PageTemplate(object):
     def pt_render(self, namespace, source=False, sourceAnnotations=False,
                   showtal=False):
         """Render this Page Template"""
+        print(f'zope.pagetemplate filename: ${getattr(self, "filename", "no file")}')  # noqa: E501 line too long
         self._cook_check()
 
         __traceback_supplement__ = (
